@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cheongwon</string>
+    <string name="title_map">지도</string>
+    <string name="title_cheongwonList">청원목록</string>
+    <string name="title_myInfo">나의 정보</string>
+    <string name="success_joinin">회원가입 완료</string>
+    <string name="success_write">글쓰기 완료</string>
+</resources>
