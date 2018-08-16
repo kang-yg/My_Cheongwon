@@ -25,7 +25,7 @@ public class CommentActivity extends AppCompatActivity {
         listCommentItem.add(new Comment_ItemList("글쓴이01", new Date(System.currentTimeMillis()), "내용01","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이02", new Date(System.currentTimeMillis()), "내용02","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이03", new Date(System.currentTimeMillis()), "내용03","0","0"));
-        listCommentItem.add(new Comment_ItemList("글쓴이04", new Date(System.currentTimeMillis()), "내용04","0","0"));
+        /*listCommentItem.add(new Comment_ItemList("글쓴이04", new Date(System.currentTimeMillis()), "내용04","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이05", new Date(System.currentTimeMillis()), "내용05","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이06", new Date(System.currentTimeMillis()), "내용06","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이07", new Date(System.currentTimeMillis()), "내용07","0","0"));
@@ -36,7 +36,7 @@ public class CommentActivity extends AppCompatActivity {
         listCommentItem.add(new Comment_ItemList("글쓴이12", new Date(System.currentTimeMillis()), "내용12","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이13", new Date(System.currentTimeMillis()), "내용13","0","0"));
         listCommentItem.add(new Comment_ItemList("글쓴이14", new Date(System.currentTimeMillis()), "내용14","0","0"));
-
+*/
         commentListAdapter= new CommentListAdapter(CommentActivity.this, listCommentItem);
         commentListView.setAdapter(commentListAdapter);
 

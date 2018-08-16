@@ -73,6 +73,7 @@ public class CommentListAdapter extends BaseAdapter {
         goodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                countGood.setText(list_CommentArray.get(position).getCommentCountGood()+1);
                 Toast.makeText(context, "좋아요 클릭", Toast.LENGTH_SHORT).show();
             }
         });
