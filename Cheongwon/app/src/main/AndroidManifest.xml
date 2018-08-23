@@ -17,10 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".JoinInActivity" />
-        <activity android:name=".Activity_map"/>
-        <activity android:name=".WriteActivity"/>
-        <activity android:name=".MyInfoActivity"/>
-        <activity android:name=".CommentActivity"/>
+        <activity android:name=".Activity_map" />
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".MyInfoActivity" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".StatisticsActivity" />
+        <activity android:name=".ContentActivity"/>
+        <activity android:name=".ReadContentActivity"/>
     </application>
 
 </manifest>

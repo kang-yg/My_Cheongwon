@@ -19,15 +19,13 @@ public class Activity_map extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_map);
-                    Intent goMapIntent = new Intent(getApplicationContext(),Activity_map.class);
-                    startActivity(goMapIntent);
+                    Intent goMapIntent = new Intent(getApplicationContext(),Activity_map.class);startActivity(goMapIntent);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_cheongwonList);
+                    Intent contentList = new Intent(getApplicationContext(),ContentActivity.class);
+                    startActivity(contentList);
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_myInfo);
                     Intent goMyInfo = new Intent(getApplicationContext(),MyInfoActivity.class);
                     startActivity(goMyInfo);
                     return true;

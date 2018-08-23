@@ -18,26 +18,17 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(getApplicationContext(),)
+                Intent loginIntent = new Intent(getApplicationContext(),Activity_map.class);
+                startActivity(loginIntent);
             }
         });
 
-/*        Button joinInButton = findViewById(R.id.JoinIn);
+       Button joinInButton = findViewById(R.id.JoinIn);
         joinInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent joininIntent = new Intent(getApplicationContext(), JoinInActivity.class);
                 startActivity(joininIntent);
-            }
-        });*/
-
-        Button joinInButton = findViewById(R.id.JoinIn);
-        joinInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent commentIntent = new Intent(getApplicationContext(), CommentActivity.class);
-                startActivity(commentIntent);
-                Log.d("메인 액티비티","버튼 클릭");
             }
         });
 
