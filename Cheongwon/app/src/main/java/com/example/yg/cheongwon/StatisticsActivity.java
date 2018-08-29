@@ -92,7 +92,7 @@ public class StatisticsActivity extends AppCompatActivity {
         dataSet02.setSelectionShift(5f);
         dataSet02.setColors(ColorTemplate.JOYFUL_COLORS);
 
-        PieData circleData02 = new PieData((dataSet02));
+        PieData circleData02 = new PieData(dataSet02);
         circleData02.setValueTextSize(10f);
         circleData02.setValueTextColor(Color.YELLOW);
 

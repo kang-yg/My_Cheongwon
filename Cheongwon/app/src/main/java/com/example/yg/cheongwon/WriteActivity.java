@@ -1,5 +1,6 @@
 package com.example.yg.cheongwon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,8 @@ public class WriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),R.string.success_write, Toast.LENGTH_LONG).show();
+                Intent backContentList = new Intent(getApplicationContext(),ContentActivity.class);
+                startActivity(backContentList);
             }
         });
 
