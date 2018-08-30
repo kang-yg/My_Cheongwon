@@ -30,6 +30,18 @@ public class ReadContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.read_content);
+
+        TextView subText = findViewById(R.id.subject1);
+
+        //Get content item info
+        Intent getter = getIntent();
+        int no_num;
+        String subuject_text;
+        int look_num;
+
+        subuject_text = getter.getStringExtra("subject");
+        subText.setText(subuject_text);
+
         dateNow = (TextView) findViewById(R.id.dateNow);
         dateNow.setText(formatDate);    // TextView 에 현재 시간 문자열 할당
 
@@ -53,7 +65,7 @@ public class ReadContentActivity extends AppCompatActivity {
         sta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goStatistics = new Intent(getApplicationContext(),StatisticsActivity.class);
+                Intent goStatistics = new Intent(getApplicationContext(), StatisticsActivity.class);
                 startActivity(goStatistics);
             }
         });
@@ -62,7 +74,7 @@ public class ReadContentActivity extends AppCompatActivity {
         readCommnet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goReadComment = new Intent(getApplicationContext(),CommentActivity.class);
+                Intent goReadComment = new Intent(getApplicationContext(), CommentActivity.class);
                 startActivity(goReadComment);
             }
         });
@@ -70,10 +82,10 @@ public class ReadContentActivity extends AppCompatActivity {
         //한달후
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH, +1);
-        Date currentTime=cal.getTime();
-        sdfNow=new SimpleDateFormat("yyyy-MM-dd 00:00:00");
-        String depart=sdfNow.format(currentTime);
-        datelater=(TextView)findViewById(R.id.datelater);
+        Date currentTime = cal.getTime();
+        sdfNow = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
+        String depart = sdfNow.format(currentTime);
+        datelater = (TextView) findViewById(R.id.datelater);
         datelater.setText(depart);
     }
 

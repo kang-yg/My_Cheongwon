@@ -17,7 +17,6 @@ public class Content_ItemLIst {
     }
 
 
-
     public String getLook_num() {
 
         return look_num;
@@ -34,7 +33,8 @@ public class Content_ItemLIst {
     public void setSubject_text(String subject_text) {
         this.subject_text = subject_text;
     }
-    public Content_ItemLIst(String no_num, String subject_text, String look_num ) {
+
+    public Content_ItemLIst(String no_num, String subject_text, String look_num) {
         this.no_num = no_num;
         this.look_num = look_num;
         this.subject_text = subject_text;
