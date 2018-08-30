@@ -29,7 +29,6 @@ import java.util.Calendar;
 
 
 public class ContentActivity extends AppCompatActivity {
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -57,6 +56,7 @@ public class ContentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_list);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -71,9 +71,10 @@ public class ContentActivity extends AppCompatActivity {
             }
         });*/
 
+        //Add content item and show content list
         ListView commentListView = findViewById(R.id.views);
         ContentListAdapter viewAdapters;
-        ArrayList<Content_ItemLIst> listview;
+        final ArrayList<Content_ItemLIst> listview;
 
         listview = new ArrayList<Content_ItemLIst>();
         listview.add(new Content_ItemLIst("1", "제목1", "0"));
@@ -90,14 +91,17 @@ public class ContentActivity extends AppCompatActivity {
         viewAdapters = new ContentListAdapter(ContentActivity.this, listview);
         commentListView.setAdapter(viewAdapters);
 
-        commentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+/*        commentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent go_content = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(go_content);
+                Log.d("click content item", listview.get(0).getNo_num());
             }
-        });
+        });*/
 
+
+        //FloatingButton
         FloatingActionMenu materialDesignFAM;
         FloatingActionButton floatingActionButton1;
 
@@ -110,5 +114,20 @@ public class ContentActivity extends AppCompatActivity {
                 startActivity(goWriteContent);
             }
         });
+
+        //ListItemClick
+        try {
+            commentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView parent, View v, int position, long id) {
+                    Intent readContentIntent = new Intent(getApplicationContext(), ReadContentActivity.class);
+                    //Enter data to forward
+                    readContentIntent.putExtra("subject",listview.get(position).getSubject_text());
+                    startActivity(readContentIntent);
+                }
+            });
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
     }
 }
