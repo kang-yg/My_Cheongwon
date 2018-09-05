@@ -2,9 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/popup_element">
 
     <TextView
         android:id="@+id/joinInTitle"
@@ -12,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:text="회원가입"
         android:textColor="@android:color/black"
@@ -42,6 +44,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:hint="아이디" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -67,7 +70,8 @@
             android:layout_weight="2"
             android:gravity="center"
             android:hint="패스워드"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -93,6 +97,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:hint="이름" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -115,7 +120,8 @@
             android:layout_width="242dp"
             android:layout_height="wrap_content"
             android:entries="@array/age"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -138,7 +144,8 @@
             android:layout_width="242dp"
             android:layout_height="wrap_content"
             android:entries="@array/job"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -165,6 +172,7 @@
             android:gravity="center"
             android:hint="전화번호"
             android:inputType="phone" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -186,20 +194,22 @@
         <RadioGroup
             android:layout_width="243dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="남자"/>
+                android:text="남자" />
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="여자"/>
+                android:text="여자" />
         </RadioGroup>
+
     </LinearLayout>
 
     <Button
@@ -207,11 +217,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/genderLayout"
         android:layout_margin="10dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="완료"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
-
 </RelativeLayout>

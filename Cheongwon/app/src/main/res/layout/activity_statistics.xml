@@ -3,26 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="2"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechart01"
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"></com.github.mikephil.charting.charts.PieChart>
-
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechart02"
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"></com.github.mikephil.charting.charts.PieChart>
-
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </RelativeLayout>

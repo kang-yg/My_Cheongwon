@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yg.cheongwon">
+    package="com.example.tests">
 
     <application
         android:allowBackup="true"
@@ -9,21 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".LogoActivity"
+            android:theme="@style/Logo"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JoinInActivity" />
-        <activity android:name=".Activity_map" />
+
+        <activity android:name=".Activity_map"/>
         <activity android:name=".WriteActivity" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".CommentActivity" />
         <activity android:name=".StatisticsActivity" />
-        <activity android:name=".ContentActivity"/>
-        <activity android:name=".ReadContentActivity"/>
+        <activity android:name=".ContentActivity" />
+        <activity android:name=".ReadContentActivity" />
+
+        <activity android:name=".MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
+        </activity>
+
+        <activity android:name=".JoinInActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
+        </activity>
+
     </application>
 
 </manifest>

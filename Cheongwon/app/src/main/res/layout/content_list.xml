@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_map">
+    tools:context=".Activity_map"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="88dp"
                 android:layout_marginStart="88dp"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:entries="@array/city"
                 android:spinnerMode="dialog" />
 
@@ -42,6 +42,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="3dp"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="left|center_vertical"
                 android:hint="내용+제목을 입력하세요."
                 android:inputType="textEmailAddress"
@@ -70,9 +71,9 @@
                 android:layout_width="74dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:text="검색"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -97,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_weight="4"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:backgroundTint="@color/sliver"
                 android:gravity="center"
                 android:text="제목" />
@@ -134,7 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="No1" />
 
@@ -143,7 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="4"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:ellipsize="end"
                 android:paddingTop="12dp"
                 android:singleLine="true"
@@ -155,10 +156,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="look_no1" />
+
         </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/secondBestContent"
@@ -172,7 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="No2" />
 
@@ -181,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="4"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:ellipsize="end"
                 android:paddingTop="12dp"
                 android:singleLine="true"
@@ -193,9 +196,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="look_no2" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="No3" />
 
@@ -219,7 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="4"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:ellipsize="end"
                 android:paddingTop="12dp"
                 android:singleLine="true"
@@ -231,9 +235,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="9"
-                android:background="@drawable/seo_border"
+                android:background="@drawable/my_border"
                 android:gravity="center"
                 android:text="look_no3" />
+
         </LinearLayout>
 
         <TextView
@@ -249,18 +254,12 @@
             android:id="@+id/views"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_below="@id/allContent"></ListView>
+            android:layout_below="@id/allContent" />
 
     </RelativeLayout>
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/material_design_android_floating_action_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        app:layout_anchorGravity="right|bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         fab:menu_animationDelayPerItem="55"
         fab:menu_backgroundColor="@android:color/transparent"
         fab:menu_buttonSpacing="0dp"
@@ -290,15 +289,21 @@
         fab:menu_shadowRadius="4dp"
         fab:menu_shadowXOffset="1dp"
         fab:menu_shadowYOffset="4dp"
-        fab:menu_showShadow="true">
+        fab:menu_showShadow="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_anchorGravity="right|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item1"
+            fab:fab_label="글쓰기"
+            fab:fab_size="mini"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_edit"
-            fab:fab_label="글쓰기"
-            fab:fab_size="mini" />
+            android:src="@android:drawable/ic_menu_edit" />
 
     </com.github.clans.fab.FloatingActionMenu>
 
@@ -312,7 +317,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"
+        app:itemIconTint="@color/blue"
+        app:layout_behavior="tech.thdev.app.view.BottomNavigationBehavior"/>
 
 </android.support.constraint.ConstraintLayout>
-

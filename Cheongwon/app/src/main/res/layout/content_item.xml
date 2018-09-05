@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_weight="10">
+    android:layout_weight="10"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/no_num"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="9"
-        android:background="@drawable/seo_border"
+        android:background="@drawable/my_border"
         android:gravity="center"
         android:text="No1" />
 
@@ -19,10 +19,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="4"
-        android:background="@drawable/seo_border"
+        android:background="@drawable/my_border"
         android:ellipsize="end"
-        android:singleLine="true"
         android:paddingTop="12dp"
+        android:singleLine="true"
         android:text="제목적어줄래"
         android:textSize="17sp" />
 
@@ -31,8 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="9"
+        android:background="@drawable/my_border"
         android:gravity="center"
-        android:text="look_no"
-        android:background="@drawable/seo_border"/>
+        android:text="look_no" />
 
 </LinearLayout>

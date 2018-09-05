@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="missingPrefix"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -46,6 +48,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:hint="아이디" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -72,6 +75,7 @@
                 android:gravity="center"
                 android:hint="패스워드"
                 android:inputType="textPassword" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,6 +101,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:hint="이름" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -119,7 +124,8 @@
                 android:layout_width="242dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/age"
-                android:spinnerMode="dialog"></Spinner>
+                android:spinnerMode="dialog" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -142,7 +148,8 @@
                 android:layout_width="242dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/job"
-                android:spinnerMode="dialog"></Spinner>
+                android:spinnerMode="dialog" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -169,6 +176,7 @@
                 android:gravity="center"
                 android:hint="전화번호"
                 android:inputType="phone" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -204,7 +212,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:text="여자" />
+
             </RadioGroup>
+
         </LinearLayout>
 
         <Button
@@ -218,6 +228,7 @@
             android:text="완료"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+
     </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView
@@ -230,5 +241,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"
+        android:clickable="true"
+        app:layout_behavior="tech.thdev.app.view.BottomNavigationBehavior"/>
 </android.support.constraint.ConstraintLayout>

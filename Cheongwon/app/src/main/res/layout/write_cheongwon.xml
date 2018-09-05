@@ -7,7 +7,7 @@
         android:id="@+id/choeongwonRuleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
+        android:background="@drawable/my_border"
         android:orientation="vertical">
 
         <TextView
@@ -27,7 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:text="@string/cheongwonRule" />
+
         </ScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -35,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/choeongwonRuleTitle">
 
         <TextView
@@ -48,7 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:entries="@array/agency"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -56,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/agencyLayout"
         android:orientation="horizontal">
 
@@ -69,6 +74,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -76,9 +82,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/subjectLayout"
         android:layout_centerVertical="true"
-        android:background="@drawable/border"
+        android:background="@drawable/my_border"
         android:orientation="vertical">
 
         <TextView
@@ -98,7 +105,9 @@
                 android:background="@null"
                 android:hint="내용을 입력하세요"
                 android:textSize="15dp" />
+
         </ScrollView>
+
     </LinearLayout>
 
     <Button
@@ -106,6 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/contentLayout"
         android:text="완료" />
 </RelativeLayout>
