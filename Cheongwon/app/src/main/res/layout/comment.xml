@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/commentTitle"
-        android:background="@drawable/border"
+        android:background="@drawable/my_border"
         android:orientation="horizontal"
         android:weightSum="5">
 
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="완료" />
+
     </LinearLayout>
 
     <TextView
@@ -56,7 +57,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_weight="3"
-            android:background="@drawable/border"
+            android:background="@drawable/my_border"
             android:text="1번 댓글" />
 
         <LinearLayout
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="좋아요 수" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -93,7 +95,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="싫어요 수" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -109,7 +113,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_weight="3"
-            android:background="@drawable/border"
+            android:background="@drawable/my_border"
             android:text="2번 댓글" />
 
         <LinearLayout
@@ -128,6 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="좋아요 수" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -146,7 +151,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="싫어요 수" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -162,7 +169,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_weight="3"
-            android:background="@drawable/border"
+            android:background="@drawable/my_border"
             android:text="3번 댓글" />
 
         <LinearLayout
@@ -181,6 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="좋아요 수" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -199,7 +207,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
                 android:text="싫어요 수" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <TextView
@@ -211,13 +221,10 @@
         android:textSize="15dp"
         android:textStyle="bold" />
 
-
     <ListView
         android:id="@+id/commentListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/allComment">
-    </ListView>
-
+        android:layout_below="@+id/allComment"></ListView>
 
 </RelativeLayout>

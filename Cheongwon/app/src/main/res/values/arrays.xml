@@ -41,7 +41,7 @@
         <item>중구(서울특별시)</item>
         <item>중랑구</item>
     </string-array>
-    
+
     <string-array name="agency">
         <item>일자리</item>
         <item>미래</item>
@@ -55,5 +55,4 @@
         <item>문화/예술/체육/언론</item>
         <item>기타</item>
     </string-array>
-
 </resources>

@@ -1,8 +1,8 @@
-package com.example.yg.cheongwon;
+package com.example.tests;
 
 import android.util.Log;
 
-public class Content_ItemLIst {
+public class Content_ItemList {
 
     private String no_num;
     private String look_num;
@@ -15,7 +15,6 @@ public class Content_ItemLIst {
     public void setNo_num(String no_num) {
         this.no_num = no_num;
     }
-
 
     public String getLook_num() {
 
@@ -33,8 +32,7 @@ public class Content_ItemLIst {
     public void setSubject_text(String subject_text) {
         this.subject_text = subject_text;
     }
-
-    public Content_ItemLIst(String no_num, String subject_text, String look_num) {
+    public Content_ItemList(String no_num, String subject_text, String look_num ) {
         this.no_num = no_num;
         this.look_num = look_num;
         this.subject_text = subject_text;

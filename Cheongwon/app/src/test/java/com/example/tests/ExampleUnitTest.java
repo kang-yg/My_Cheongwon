@@ -1,4 +1,4 @@
-package com.example.yg.cheongwon;
+package com.example.tests;
 
 import org.junit.Test;
 

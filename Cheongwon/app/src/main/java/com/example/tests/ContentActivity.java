@@ -1,4 +1,4 @@
-package com.example.yg.cheongwon;
+package com.example.tests;
 
 import android.content.Intent;
 
@@ -16,10 +16,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.yg.cheongwon.ContentListAdapter;
-import com.example.yg.cheongwon.Content_ItemLIst;
-import com.example.yg.cheongwon.MainActivity;
-import com.example.yg.cheongwon.R;
+
+import com.example.tests.ContentListAdapter;
+import com.example.tests.Content_ItemList;
+import com.example.tests.MainActivity;
+import com.example.tests.R;
 import com.github.clans.fab.FloatingActionMenu;
 
 import java.text.SimpleDateFormat;
@@ -27,26 +28,36 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Calendar;
 
-
 public class ContentActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
+        public int a=1;
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     Intent goMapIntent = new Intent(getApplicationContext(), Activity_map.class);
                     startActivity(goMapIntent);
+                    finish();
                     return true;
                 case R.id.navigation_dashboard:
                     Intent contentList = new Intent(getApplicationContext(), ContentActivity.class);
                     startActivity(contentList);
+                    finish();
                     return true;
                 case R.id.navigation_notifications:
-                    Intent goMyInfo = new Intent(getApplicationContext(), MyInfoActivity.class);
-                    startActivity(goMyInfo);
-                    return true;
+                    if(a==0){    //로그인됨
+                        Intent goMyInfo = new Intent(getApplicationContext(), MyInfoActivity.class);
+                        startActivity(goMyInfo);
+                        finish();
+                        return true;
+                    }
+                    else if(a==1){
+                        startActivity(new Intent(ContentActivity.this, MainActivity.class));
+                        a=0;
+                        return true;
+                    }
             }
             return false;
         }
@@ -62,25 +73,16 @@ public class ContentActivity extends AppCompatActivity {
 
         Log.d("listes", "onCreate");
 
-/*        ViewGroup best01 = (ViewGroup) findViewById(R.id.firstBestComment);
-        best01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goReadContent = new Intent(getApplicationContext(),ReadContentActivity.class);
-                startActivity(goReadContent);
-            }
-        });*/
-
         //Add content item and show content list
         ListView commentListView = findViewById(R.id.views);
         ContentListAdapter viewAdapters;
-        final ArrayList<Content_ItemLIst> listview;
+        final ArrayList<Content_ItemList> listview;
 
-        listview = new ArrayList<Content_ItemLIst>();
-        listview.add(new Content_ItemLIst("1", "제목1", "0"));
-        listview.add(new Content_ItemLIst("2", "제목2", "0"));
-        listview.add(new Content_ItemLIst("3", "제목3", "0"));
-        listview.add(new Content_ItemLIst("4", "제목4", "0"));
+        listview = new ArrayList<Content_ItemList>();
+        listview.add(new Content_ItemList("1", "제목1", "0"));
+        listview.add(new Content_ItemList("2", "제목2", "0"));
+        listview.add(new Content_ItemList("3", "제목3", "0"));
+        listview.add(new Content_ItemList("4", "제목4", "0"));
         /*listview.add(new Item(5,"제목5",0));
         listview.add(new Item(6,"제목2",0));
         listview.add(new Item(7,"제목3",0));
@@ -112,6 +114,7 @@ public class ContentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent goWriteContent = new Intent(getApplicationContext(), WriteActivity.class);
                 startActivity(goWriteContent);
+                finish();
             }
         });
 
@@ -124,6 +127,7 @@ public class ContentActivity extends AppCompatActivity {
                     //Enter data to forward
                     readContentIntent.putExtra("subject",listview.get(position).getSubject_text());
                     startActivity(readContentIntent);
+                    finish();
                 }
             });
         } catch (Exception e) {

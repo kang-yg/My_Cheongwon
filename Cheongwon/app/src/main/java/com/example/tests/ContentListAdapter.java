@@ -1,4 +1,4 @@
-package com.example.yg.cheongwon;
+package com.example.tests;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,21 +8,19 @@ import android.widget.TextView;
 import android.view.ViewGroup;
 import android.view.View;
 
-import com.example.yg.cheongwon.R;
-
 import java.lang.*;
 import java.util.ArrayList;
 
 public class ContentListAdapter extends BaseAdapter {
     Context context;
-    ArrayList<Content_ItemLIst> itemArrayList;
+    ArrayList<Content_ItemList> itemArrayList;
 
     TextView no_num;
     TextView look_num;
     TextView subject_text;
 
 
-    public ContentListAdapter(Context context, ArrayList<Content_ItemLIst> itemArrayList) {
+    public ContentListAdapter(Context context, ArrayList<Content_ItemList> itemArrayList) {
         this.context = context;
         this.itemArrayList = itemArrayList;
 
@@ -58,6 +56,4 @@ public class ContentListAdapter extends BaseAdapter {
         look_num.setText(itemArrayList.get(position).getLook_num());
         return convertView;
     }
-
-
 }
